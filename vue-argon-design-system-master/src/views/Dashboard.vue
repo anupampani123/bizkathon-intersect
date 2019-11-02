@@ -34,10 +34,8 @@
                             </div>
                         </div>
                         <div class="text-center mt-5">
-                            <h3>{{userName}}
-                            </h3>
-                            <br>
-                            <span class="font-weight-light">Social Score: 78</span>
+                            <h3>{{userName}}</h3>
+                            <span class="font-weight-light">A/C:{{accNo}}</span>
                         </div>
                         <div class="col-lg-4 order-lg-1">
                                 <div class="card-profile-stats d-flex justify-content-center">
@@ -88,6 +86,9 @@ export default {
         },
         userName: function(){
             return localStorage.getItem('userName');
+        },
+        accNo: function(){
+            return localStorage.getItem('Acc');
         },
     },
     mounted () {
