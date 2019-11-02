@@ -71,19 +71,31 @@
     </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
+    data(){
+        return{
+            returnP:null
+        }
+    },
     computed: {
         totalInvestment: function(){
-            
+            console.log(this.returnP)
             return localStorage.getItem('totalInvestment');
         },
         returns: function(){
-            return (parseFloat(this.totalInvestment) * 0.30).toFixed(4);
+            return (parseFloat(this.totalInvestment) * this.returnP).toFixed(4);
         },
         userName: function(){
             return localStorage.getItem('userName');
-        }
-    }
+        },
+    },
+    mounted () {
+    axios
+      .get('http://202.125.231.40:3000/returns')
+      .then(response => (this.returnP = response.data))
+      .catch(error => console.log(error))
+  }
 };
 </script>
 <style>
