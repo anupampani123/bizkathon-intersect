@@ -30,6 +30,7 @@
             <base-input style="margin:10px 20px 10px 30px" placeholder="Name" v-model="name" required></base-input>
             
             <base-input style="margin:10px 20px 10px 30px" placeholder="Email"></base-input>
+            <base-input style="margin:10px 20px 10px 30px" placeholder="A/C Number"></base-input>
             <base-input style="margin:10px 20px 10px 30px" type="password" placeholder="Password"></base-input>
             <h6 style="margin:30px 20px 10px 30px"> Limit to</h6>
             <div class="row" style="margin:10px 20px 10px 30px">
