@@ -27,7 +27,7 @@
             <br>
             <br>
             <br>
-            <base-input style="margin:10px 20px 10px 30px" placeholder="Name" v-model="name"></base-input>
+            <base-input style="margin:10px 20px 10px 30px" placeholder="Name" v-model="name" required></base-input>
             
             <base-input style="margin:10px 20px 10px 30px" placeholder="Email"></base-input>
             <base-input style="margin:10px 20px 10px 30px" type="password" placeholder="Password"></base-input>

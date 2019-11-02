@@ -36,6 +36,8 @@
                         <div class="text-center mt-5">
                             <h3>{{userName}}
                             </h3>
+                            <br>
+                            <span class="font-weight-light">Social Score: 78</span>
                         </div>
                         <div class="col-lg-4 order-lg-1">
                                 <div class="card-profile-stats d-flex justify-content-center">
@@ -48,7 +50,7 @@
                                         <span class="description">Returns</span>
                                     </div>
                                     <div>
-                                        <span class="heading">70%</span>
+                                        <span class="heading">38%</span>
                                         <span class="description">Risk</span>
                                     </div>
                                 </div>
