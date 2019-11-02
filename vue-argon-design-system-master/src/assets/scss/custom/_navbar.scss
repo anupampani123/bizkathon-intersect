@@ -15,6 +15,12 @@
     }
 }
 
+.router-nav {
+    color: $white;
+    &:hover{
+        color: #dee2e6;
+    }
+}
 .navbar-brand {
     font-size: $font-size-sm;
     font-weight: 600;
