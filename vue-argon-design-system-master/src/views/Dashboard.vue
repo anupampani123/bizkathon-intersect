@@ -34,18 +34,17 @@
                             </div>
                         </div>
                         <div class="text-center mt-5">
-                            <h3>Jessica Jones
-                                <span class="font-weight-light">, 22</span>
+                            <h3>{{userName}}
                             </h3>
                         </div>
                         <div class="col-lg-4 order-lg-1">
                                 <div class="card-profile-stats d-flex justify-content-center">
                                     <div>
-                                        <span class="heading">$36</span>
+                                        <span class="heading">${{totalInvestment}}</span>
                                         <span class="description">Invested</span>
                                     </div>
                                     <div>
-                                        <span class="heading">$10</span>
+                                        <span class="heading">${{returns}}</span>
                                         <span class="description">Returns</span>
                                     </div>
                                     <div>
@@ -54,7 +53,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="chart">
+                            <div id="chart" >
                                 <h5> Daily Invested Amount</h5>
                                 <br>
                                 <img src="img/brand/chart1.png">
@@ -70,7 +69,20 @@
     </div>
 </template>
 <script>
-export default {};
+export default {
+    computed: {
+        totalInvestment: function(){
+            
+            return localStorage.getItem('totalInvestment');
+        },
+        returns: function(){
+            return (parseFloat(this.totalInvestment) * 0.30).toFixed(4);
+        },
+        userName: function(){
+            return localStorage.getItem('userName');
+        }
+    }
+};
 </script>
 <style>
 </style>

@@ -89,16 +89,20 @@ export default {
           { Time: '14:32', Category: 'Food', Amount: 10.44,Invested:0.56 }
         ],
         category: "",
-        amount: ""
+        amount: "",
       }
     },
     computed: {
         tableData: function(){
             var ans="<tbody>";
+            var sum = 0;
             for(var i=0;i<this.items.length;i++){
                 ans+="<tr> <th scope='row'>"+(i+1)+"</th> <td>"+this.items[i]["Time"]+"</td> <td>"+this.items[i]["Category"]+"</td> <td>$"+this.items[i]["Amount"]+"</td> <td>$"+this.items[i]["Invested"]+"</td> </tr>"
+                sum+=parseFloat(this.items[i]["Invested"]);
             }
             ans+="</tbody>";
+
+            localStorage.setItem("totalInvestment",sum.toFixed(2));
             return ans;
         }
     },
@@ -110,7 +114,6 @@ export default {
             this.items.push({Time:t,Category:this.category,Amount:this.amount,Invested:inv.toFixed(2)});
             this.amount="";
             this.category="";
-            return false;
         }
         
     }

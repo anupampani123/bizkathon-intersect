@@ -27,7 +27,8 @@
             <br>
             <br>
             <br>
-            <base-input style="margin:10px 20px 10px 30px" placeholder="Name"></base-input>
+            <base-input style="margin:10px 20px 10px 30px" placeholder="Name" v-model="name"></base-input>
+            
             <base-input style="margin:10px 20px 10px 30px" placeholder="Email"></base-input>
             <base-input style="margin:10px 20px 10px 30px" type="password" placeholder="Password"></base-input>
             <h6 style="margin:30px 20px 10px 30px"> Limit to</h6>
@@ -51,11 +52,13 @@
             </div>
             <br>
             <br>
-            <router-link to="/dashboard"><div class="btn-wrapper" style="margin:10px 20px 10px 30px">
+            <router-link to="/transaction">
+            <div class="btn-wrapper" style="margin:10px 20px 10px 30px">
                                     <base-button tag="a"
                                                  href="#"
                                                  class="mb-3 mb-sm-0"
-                                                 type="info">
+                                                 type="info"
+                                                 v-on:click="addUser">
                                         Done
                                     </base-button>
             </div></router-link>
@@ -64,12 +67,18 @@
 </template>
 <script>
 export default {
-     data(){
+    data(){
         return {
-         radio: {
-           limit: "limit"
-         }
-       }
+            radio: {
+            limit: "limit"
+            },
+            name:""
+        }
+    },
+    methods: {
+        addUser: function(event){
+            localStorage.setItem("userName",this.name);
+        }
     }
 };
 </script>
