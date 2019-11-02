@@ -7,7 +7,7 @@ import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import Profile from "./views/Profile.vue";
-
+import Introduction from "./views/Introduction.vue";
 Vue.use(Router);
 
 export default new Router({
@@ -63,7 +63,7 @@ export default new Router({
       name: "intro",
       components: {
         header: AppHeader,
-        default: intro,
+        default: Introduction,
         footer: AppFooter
       },
     }
