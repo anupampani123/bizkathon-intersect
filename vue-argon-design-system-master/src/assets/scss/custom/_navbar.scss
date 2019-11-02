@@ -21,6 +21,11 @@
         color: #dee2e6;
     }
 }
+@media screen and (max-width: 320px) {
+    .router-nav {
+        color: $black;
+    }
+  }
 .navbar-brand {
     font-size: $font-size-sm;
     font-weight: 600;
