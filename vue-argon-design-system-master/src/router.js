@@ -56,7 +56,16 @@ export default new Router({
         header: AppHeader,
         default: Profile,
         footer: AppFooter
-      }
+      },
+    },
+    {
+      path: "/intro",
+      name: "intro",
+      components: {
+        header: AppHeader,
+        default: intro,
+        footer: AppFooter
+      },
     }
   ],
   scrollBehavior: to => {
