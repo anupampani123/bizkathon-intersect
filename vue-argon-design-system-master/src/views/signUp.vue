@@ -29,9 +29,9 @@
             <br>
             <base-input style="margin:10px 20px 10px 30px" placeholder="Name" v-model="name" required></base-input>
             
-            <base-input style="margin:10px 20px 10px 30px" placeholder="Email"></base-input>
+            <base-input style="margin:10px 20px 10px 30px" placeholder="Email" v-model="email"></base-input>
             <base-input style="margin:10px 20px 10px 30px" placeholder="A/C Number" v-model="accNo"></base-input>
-            <base-input style="margin:10px 20px 10px 30px" type="password" placeholder="Password"></base-input>
+            <base-input style="margin:10px 20px 10px 30px" type="password" placeholder="Password" v-model="pwd"></base-input>
             <h6 style="margin:30px 20px 10px 30px"> Limit to</h6>
             <div class="row" style="margin:10px 20px 10px 30px">
                 <div class="col-xs-5"><base-radio name="limit0" class="mb-3" v-model="radio.limit">
@@ -73,8 +73,10 @@ export default {
             radio: {
             limit: "limit"
             },
-            name:"",
-            accNo:""
+            name:"Ajay Rajnikanth",
+            accNo:"25434253",
+            email:"ajay.rajnikanth@gmail.com",
+            pwd:"fsgdfg"
         }
     },
     methods: {
