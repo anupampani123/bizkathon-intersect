@@ -73,7 +73,7 @@ import axios from 'axios'
 export default {
     data(){
         return{
-            returnP:null
+            returnP:0.35
         }
     },
     computed: {
