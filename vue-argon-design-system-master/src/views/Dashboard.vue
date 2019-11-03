@@ -25,10 +25,10 @@
                             </div>
                             <br>
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
-                                <div class="card-profile-actions py-4 mt-lg-0">
+                                <div class="card-profile-actions py-4 mt-lg-0" style="margin-left:30px">
                                     <base-button type="success" size="sm" class="mr-4" icon="fa fa-money" >Spend</base-button>
-                                    <base-button type="primary" size="sm" class="mr-4" icon="fa fa-refresh"></base-button>
-                                    <base-button type="info" size="sm" class="mr-4" icon="fa fa-donate">Donate</base-button>
+            
+                                    <base-button type="info" size="sm" class="mr-4" icon="fa fa-gift">Donate</base-button>
                                     
                                 </div>
                             </div>
