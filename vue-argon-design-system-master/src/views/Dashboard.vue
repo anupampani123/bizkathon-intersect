@@ -93,7 +93,7 @@ export default {
     },
     mounted () {
     axios
-      .get('http://202.125.231.40:3000/returns')
+      .get('http://localhost:3000/returns')
       .then(response => (this.returnP = response.data))
       .catch(error => console.log(error))
   }
