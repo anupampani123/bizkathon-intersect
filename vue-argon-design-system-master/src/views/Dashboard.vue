@@ -25,19 +25,17 @@
                             </div>
                             <br>
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
-                                <div class="card-profile-actions py-4 mt-lg-0">
+                                <div class="card-profile-actions py-4 mt-lg-0" style="margin-left:30px">
                                     <base-button type="success" size="sm" class="mr-4" icon="fa fa-money" >Spend</base-button>
-                                    <base-button type="primary" size="sm" class="mr-4" icon="fa fa-refresh">Reset</base-button>
-                                    <base-button type="info" size="sm" class="mr-4" icon="fa fa-cog"></base-button>
+            
+                                    <base-button type="info" size="sm" class="mr-4" icon="fa fa-gift">Donate</base-button>
                                     
                                 </div>
                             </div>
                         </div>
                         <div class="text-center mt-5">
-                            <h3>{{userName}}
-                            </h3>
-                            <br>
-                            <span class="font-weight-light">Social Score: 78</span>
+                            <h3>{{userName}}</h3>
+                            <span class="font-weight-light">A/C:{{accNo}}</span>
                         </div>
                         <div class="col-lg-4 order-lg-1">
                                 <div class="card-profile-stats d-flex justify-content-center">
@@ -71,19 +69,34 @@
     </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
+    data(){
+        return{
+            returnP:null
+        }
+    },
     computed: {
         totalInvestment: function(){
-            
+            console.log(this.returnP)
             return localStorage.getItem('totalInvestment');
         },
         returns: function(){
-            return (parseFloat(this.totalInvestment) * 0.30).toFixed(4);
+            return (parseFloat(this.totalInvestment) * this.returnP).toFixed(4);
         },
         userName: function(){
             return localStorage.getItem('userName');
-        }
-    }
+        },
+        accNo: function(){
+            return localStorage.getItem('Acc');
+        },
+    },
+    mounted () {
+    axios
+      .get('http://202.125.231.40:3000/returns')
+      .then(response => (this.returnP = response.data))
+      .catch(error => console.log(error))
+  }
 };
 </script>
 <style>
