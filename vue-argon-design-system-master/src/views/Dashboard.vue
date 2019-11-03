@@ -27,8 +27,8 @@
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                                 <div class="card-profile-actions py-4 mt-lg-0">
                                     <base-button type="success" size="sm" class="mr-4" icon="fa fa-money" >Spend</base-button>
-                                    <base-button type="primary" size="sm" class="mr-4" icon="fa fa-refresh">Reset</base-button>
-                                    <base-button type="info" size="sm" class="mr-4" icon="fa fa-cog"></base-button>
+                                    <base-button type="primary" size="sm" class="mr-4" icon="fa fa-refresh"></base-button>
+                                    <base-button type="info" size="sm" class="mr-4" icon="fa fa-donate">Donate</base-button>
                                     
                                 </div>
                             </div>
