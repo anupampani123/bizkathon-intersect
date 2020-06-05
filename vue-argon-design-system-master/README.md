@@ -1,1 +1,0 @@
-<h1> Bizkathon - Prototype</h1>
